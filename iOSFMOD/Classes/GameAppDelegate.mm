@@ -1,6 +1,9 @@
 #import "GameAppDelegate.h"
 #import "ES2RendererView.h"
 
+#include <fmod.hpp>
+#include <fmod_errors.h>
+
 @implementation GameAppDelegate
 
 // This app shows how to use Game in a more modern way.
@@ -13,10 +16,37 @@
 // You need this synthesize call, to be able to call self.window in this class.
 @synthesize window ;
 
+
+bool FMOD_ErrorCheck( FMOD_RESULT result, int line, const char* file ) {
+  if( result != FMOD_OK ) {
+    printf( "FMOD error %s:%d -- (%d) %s", file, line, result, FMOD_ErrorString(result) );
+  }
+
+  return result == FMOD_OK;
+}
+
+#define FMOD_CHECK( result ) FMOD_ErrorCheck( result, __LINE__, __FILE__ )
+
+
+FMOD::System* fmodSystem = 0;
 // We replaced the initWithCoder method with this regular init one
 // 2.
 - (id) init {
   puts( "2. [GameAppDelegate init] (WITHOUT CODER)" ) ;
+  FMOD_CHECK( FMOD::System_Create( &fmodSystem ) );
+  FMOD_CHECK( fmodSystem->init( 64, FMOD_INIT_NORMAL, 0 ) );
+  
+  FMOD::Sound* sound = 0;
+  NSString *filename = @"/brace for missile impact.mp3";
+  
+  NSString *path = [[NSBundle mainBundle] resourcePath];
+  NSString *p = [path stringByAppendingString:filename];
+  //[[NSBundle mainBundle] resourcePath], filename] UTF8String];
+  FMOD_CHECK( fmodSystem->createSound( p.UTF8String, FMOD_CREATESAMPLE, 0, &sound ) );
+  
+  FMOD::Channel* channel = 0;
+  FMOD_CHECK( fmodSystem->playSound( sound, 0, 0, &channel ) );
+  
   
   self = [super init];
   if (!self)  return self;

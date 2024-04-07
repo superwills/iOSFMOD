@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3D6E8B1B2BA8D33A00D29DCF /* vertexShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E8B192BA8D33A00D29DCF /* vertexShader.vsh */; };
 		3D6E8B1C2BA8D33A00D29DCF /* fragmentShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E8B1A2BA8D33A00D29DCF /* fragmentShader.fsh */; };
+		3D6E8B242BA8E30300D29DCF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6E8B232BA8E30300D29DCF /* AudioToolbox.framework */; };
+		3D6E8B262BA8E30B00D29DCF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6E8B252BA8E30B00D29DCF /* AVFoundation.framework */; };
+		3D6E8B332BA8E53900D29DCF /* brace for missile impact.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E8B322BA8E53900D29DCF /* brace for missile impact.mp3 */; };
 		9F0BBD33185D33C90007D318 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0BBD32185D33C90007D318 /* Foundation.framework */; };
 		9F0BBD35185D33C90007D318 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0BBD34185D33C90007D318 /* CoreGraphics.framework */; };
 		9F0BBD37185D33C90007D318 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0BBD36185D33C90007D318 /* UIKit.framework */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		3D6E8B192BA8D33A00D29DCF /* vertexShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = vertexShader.vsh; path = iOSFMOD/Shaders/vertexShader.vsh; sourceTree = "<group>"; };
 		3D6E8B1A2BA8D33A00D29DCF /* fragmentShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = fragmentShader.fsh; path = iOSFMOD/Shaders/fragmentShader.fsh; sourceTree = "<group>"; };
+		3D6E8B232BA8E30300D29DCF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3D6E8B252BA8E30B00D29DCF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3D6E8B322BA8E53900D29DCF /* brace for missile impact.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "brace for missile impact.mp3"; path = "iOSFMOD/brace for missile impact.mp3"; sourceTree = "<group>"; };
 		9F0BBD2F185D33C90007D318 /* iOSFMOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFMOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0BBD32185D33C90007D318 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9F0BBD34185D33C90007D318 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,11 +54,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6E8B262BA8E30B00D29DCF /* AVFoundation.framework in Frameworks */,
+				3D6E8B242BA8E30300D29DCF /* AudioToolbox.framework in Frameworks */,
+				9F0BBD35185D33C90007D318 /* CoreGraphics.framework in Frameworks */,
+				9F0BBD33185D33C90007D318 /* Foundation.framework in Frameworks */,
 				9F0BBD72185D349F0007D318 /* OpenGLES.framework in Frameworks */,
 				9F0BBD70185D34970007D318 /* QuartzCore.framework in Frameworks */,
-				9F0BBD35185D33C90007D318 /* CoreGraphics.framework in Frameworks */,
 				9F0BBD37185D33C90007D318 /* UIKit.framework in Frameworks */,
-				9F0BBD33185D33C90007D318 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +81,7 @@
 		9F0BBD26185D33C90007D318 = {
 			isa = PBXGroup;
 			children = (
+				3D6E8B322BA8E53900D29DCF /* brace for missile impact.mp3 */,
 				3D6E8B1A2BA8D33A00D29DCF /* fragmentShader.fsh */,
 				3D6E8B192BA8D33A00D29DCF /* vertexShader.vsh */,
 				9F0BBD38185D33C90007D318 /* iOSFMOD */,
@@ -92,6 +101,8 @@
 		9F0BBD31185D33C90007D318 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D6E8B252BA8E30B00D29DCF /* AVFoundation.framework */,
+				3D6E8B232BA8E30300D29DCF /* AudioToolbox.framework */,
 				9F0BBD71185D349F0007D318 /* OpenGLES.framework */,
 				9F0BBD6F185D34970007D318 /* QuartzCore.framework */,
 				9F0BBD32185D33C90007D318 /* Foundation.framework */,
@@ -167,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6E8B332BA8E53900D29DCF /* brace for missile impact.mp3 in Resources */,
 				3D6E8B1B2BA8D33A00D29DCF /* vertexShader.vsh in Resources */,
 				3D6E8B1C2BA8D33A00D29DCF /* fragmentShader.fsh in Resources */,
 				9F0BBD45185D33C90007D318 /* Images.xcassets in Resources */,
@@ -225,8 +237,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"/Users/william/code/Libraries/FMOD Programmers API/api/core/inc\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "\"/Users/william/code/Libraries/FMOD Programmers API/api/core/lib\"";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lfmodL_$PLATFORM_NAME";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -260,7 +275,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"/Users/william/code/Libraries/FMOD Programmers API/api/core/inc\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "\"/Users/william/code/Libraries/FMOD Programmers API/api/core/lib\"";
+				OTHER_LDFLAGS = "-lfmod_$PLATFORM_NAME";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
