@@ -237,9 +237,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"/Users/william/code/Libraries/FMOD Programmers API/api/core/inc\"";
+				HEADER_SEARCH_PATHS = /Users/william/code/Libraries/FMOD/api/core/inc;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = "\"/Users/william/code/Libraries/FMOD Programmers API/api/core/lib\"";
+				LIBRARY_SEARCH_PATHS = /Users/william/code/Libraries/FMOD/api/core/lib;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lfmodL_$PLATFORM_NAME";
 				SDKROOT = iphoneos;
@@ -275,9 +275,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"/Users/william/code/Libraries/FMOD Programmers API/api/core/inc\"";
+				HEADER_SEARCH_PATHS = /Users/william/code/Libraries/FMOD/api/core/inc;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = "\"/Users/william/code/Libraries/FMOD Programmers API/api/core/lib\"";
+				LIBRARY_SEARCH_PATHS = /Users/william/code/Libraries/FMOD/api/core/lib;
 				OTHER_LDFLAGS = "-lfmod_$PLATFORM_NAME";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
